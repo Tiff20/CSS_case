@@ -23,9 +23,118 @@
         .clearfix{
             *zoom:1;
         }
+        a {
+                color: #050505;
+                text-decoration: none;  /* 取消下划线 */
+        }
+        input {
+                border: 0;  /* 所有的表单边框为0 */
+                box-sizing: border-box; /* CSS3盒子模型 border 和 padding 都包含到 width 里面去 */
+        }
+
+    /* css初始化结束 */
+
+    /* 页面头部分 */
+        body {
+            background-color: #f3f5f7;  /* 整个页面的背景色 */
+        }
+        header {
+            height: 100px; 
+            /* background-color: pink; */
+            overflow: hidden;
+        }
+        nav {
+            width: 1366px; /* 宽度暂且定为1366 */
+            height: 42px;
+            margin: 26px auto ; /*  盒子水平居中对齐 */
+        }
+        .logo {
+            float: left;
+        }
+        .navbar {
+            float: left;
+            height: 42px;
+            line-height: 42px;  /* 这个行高给父亲， 行高会继承 */
+            margin-left: 50px;
+        }
+        .navbar li {
+            float: left;  /* 让 首页 课程 这个一行显示 */
+        }
+        .navbar li a {  
+            padding: 0 10px; /*  上下 0  左右 8像素 */
+            display: block; /*  a是行内元素，给高需要转换块级 */
+            height: 42px;
+        }
+        .navbar li a:hover {
+            border-bottom: 2px solid #00a4ff;  /* 鼠标放入底边框 */
+        }
+
+        /* 搜索框部分开始 */
+            .search {
+                width: 410px;  /* 360 + 50 */
+                height: 38px;
+                border: 1px solid #00a4ff;
+                float: right;
+            }
+            .search input[type=text] {  /* 属性选择器  type 为 text 的文本框 */
+                /* background-color: pink; */
+                width: 360px;
+                height: 38px;
+                padding-left: 20px;
+                float: left;
+            }
+            .search input[type=submit]{/* 属性选择器  type 为 submit 的文本框 */
+                width: 50px;
+                height: 38px;
+                float: left;
+                background: #00a4ff url(images/search_06.png) center center no-repeat;
+            } 
+            /* 搜索框部分结束 */
+            /* 个人中心开始 */
+            .personal {
+                float: right;
+                height: 42px;
+                line-height: 42px;  /* 这个行高给父亲， 行高会继承 */
+                margin: 0 15px 0 35px;  /* 上0 右 15  下0 左  35 */
+            }
+            .personal img {
+                margin: 0 8px;
+            }
+            /* 个人中心结束 */    
     </style>
 </head>
 <body>
-    
+<!-- 结构 -->
+        <!-- 页面头部分   -->
+        <header>
+        <!-- nav部分 -->
+            <nav>
+                <!-- logo部分 -->
+                <div class="logo">  
+                    <img src="images/logo_03.png" alt="">
+                </div>
+                <!-- 导航栏部分 -->
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">课程</a></li>
+                        <li><a href="#">职业规划</a></li>
+                    </ul>
+                </div>
+                <!-- 个人中心部分 -->
+                <div class="personal">      
+                    <a href="#">个人中心 <img src="images/ling_06.png"  alt=""></a>
+                    <a href="#"><img src="images/tou_03.png" > 刘德华</a>
+                </div>
+                <!-- 搜索框部分 -->
+                <div class="search">
+                    <form action="">
+                        <input type="text" placeholder="请输入关键词">
+                        <!-- placeholder占位符 内容输入自动清除默认值 -->
+                        <input type="submit"  value="">
+                    </form>
+                </div>
+            </nav>
+        </header>
 </body>
 </html>
