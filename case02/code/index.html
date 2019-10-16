@@ -110,6 +110,28 @@
                 height: 420px;
                 background:  url(images/banner_03.png) 0 0 no-repeat;
             }
+            .slidebar {
+                height: 420px;
+                width: 190px;
+                background: rgba(0, 0, 0, 0.3);/*  盒子背景半透明 */
+                float: left;
+            }
+            .slidebar li a {
+                color: #fff;
+                font-size: 14px;
+                padding: 0 20px;
+                /* a是行内元素，没有大小需要转换 */
+                display: block;
+                line-height: 45px; /* 单行垂直居中 个人经验，很多情况下， 有了行高可以不用给高度 */
+
+            }
+            .slidebar li a:hover {
+                color: #00a4ff ;
+            }
+            .slidebar a span {
+                float: right;
+                font-family: arial; /* 一般情况我们的符号都用这个字体 */
+            }
 
     </style>
 </head>
@@ -149,7 +171,23 @@
             <!-- banner部分 -->
         <div class="banner">
             <div class="banner-in container">
-            </div>>
+                <!-- 左侧导航栏 侧边栏 -->
+                <div class="slidebar">
+                    <ul>
+                        <li><a href="#">前端开发 <span>></span> </a></li>
+                        <li><a href="#">后端开发 <span>></span> </a></li>
+                        <li><a href="#">移动开发 <span>></span> </a></li>
+                        <li><a href="#">人工智能 <span>></span> </a></li>
+                        <li><a href="#">商业预测 <span>></span> </a></li>
+                        <li><a href="#">云计算&大数据 <span>></span> </a></li>
+                        <li><a href="#">运维&从测试 <span>></span> </a></li>
+                        <li><a href="#">UI设计 <span>></span> </a></li>
+                        <li><a href="#">产品 <span>></span> </a></li>
+                    </ul>
+                </div>
+
+
+            </div>
         </div>
 </body>
 </html>
